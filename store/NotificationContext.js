@@ -11,6 +11,11 @@ export function NotificationContextProvider(props) {
 
   function showNotificationHandler(notificationData) {
     setActiveNotification(notificationData);
+    // setActiveNotification({
+    //   title: notificationData.title,
+    //   message: notificationData.message,
+    //   status: notificationData.status
+    // });
   }
 
   function hideNotificationHandler() {
@@ -24,7 +29,7 @@ export function NotificationContextProvider(props) {
     hideNotification: hideNotificationHandler
   };
 
-
+  // distribute the context to required components via value props
   return (
     <NotificationContext.Provider value={context}>
       {props.children}

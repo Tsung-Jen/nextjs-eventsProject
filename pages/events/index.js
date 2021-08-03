@@ -1,11 +1,11 @@
-import { Fragment } from 'react';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
+import { Fragment } from "react";
+import { useRouter } from "next/router";
+import Head from "next/head";
 
 // import { getAllEvents } from '../../dummy-data';
-import { getAllEvents } from '../../helpers/api-util';
-import EventList from '../../components/events/EventList';
-import EventsSearch from '../../components/events/EventsSearch';
+import { getAllEvents } from "../../helpers/api-util";
+import EventList from "../../components/events/EventList";
+import EventsSearch from "../../components/events/EventsSearch";
 
 function AllEventsPage(props) {
   const router = useRouter(); // used for programmatic navigation
@@ -30,7 +30,7 @@ function AllEventsPage(props) {
       <EventsSearch onSearch={findEventsHandler} />
       <EventList items={events} />
     </Fragment>
-  );  
+  );
 }
 
 export async function getStaticProps() {
@@ -38,9 +38,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      events: events
+      events: events,
     },
-    revalidate: 60
+    revalidate: 60,
   };
 }
 

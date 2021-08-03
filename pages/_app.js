@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
     <NotificationContextProvider>
       <Layout>
         <Head>
-          <title>Events Together</title>
+          <title>EventsTogether</title>
           <meta name="description" content="Events Together" />
           <meta name="viewport" content="inital-scale=1.0, width=device-width" />
         </Head>
